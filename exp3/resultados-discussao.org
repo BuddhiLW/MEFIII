@@ -1,0 +1,17 @@
+Medir a indução magnética do material vs campo magnético aplicado
+
+$B = \mu_{0} H + \mu_{0} M$ 
+$M = \chi H$
+
+- Medida de Indução Magnética ($M$)
+  + Fluxômetro ou fluxímetro.
+
+- Geração de Campo Magnético (H)
+  + Fonte de corrente.
+  + Bobina grande de cobre.
+  + Núcleo de Fe-Si em forma de U.
+
+
+* Resultados
+
+* Discussão

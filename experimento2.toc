@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Resumo}{1}{section.1}%
+\contentsline {section}{\numberline {2}Introdução}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Bases teóricas e deduções}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Implicações tecnológicas}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Lei de Moore}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Barreiras e limites clássicos}{2}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Região não-Ohmica}{3}{subsubsection.2.2.3}%
+\contentsline {section}{\numberline {3}Referências}{3}{section.3}%
