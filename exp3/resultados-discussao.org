@@ -16,7 +16,13 @@ $M = \chi H$
 ** Experimento 1  - Bobina primária, sem núcleo
 Por breviedade e concisão, apresentaremos os gráficos, em escala, justapostos das grandezas físicas plotadas contra o tempo.
 
-*** Gráfico Justaposto
+
+*** Gráficos 
+
+#+caption: V(t) vs B(t), sem núcleo
+#+ATTR_ORG: :width 200
+[[file:img-plots/V-B-justaposicao-sem-nucleo.png][file:img-plots/V-B-justaposicao-sem-nucleo.png]]
+
 
 ** Experimento 2 - Com núcleo, liga Fe-Si
 Fluxímetro: $A = l.e$; $N_{\textrm{bobinas}} = 1$.
