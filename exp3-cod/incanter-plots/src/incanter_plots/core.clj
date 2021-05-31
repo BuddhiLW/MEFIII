@@ -133,3 +133,24 @@
   (set-stroke :width 3 :dash 5)
   (add-subtitle "Histerese")
   view)
+
+
+;; --- Comparação entre o caso sem e com material ---
+
+(def B-comparacao 
+  (doto (scatter-plot time-data-com B-data-com
+                      :title "Justaposição B(t) material e não-material"
+                      :x-label "Tempo (s)"
+                      :y-label "B(T)"
+                      :series-label "B(s) com material"
+                      :legend true)
+    (set-stroke-color java.awt.Color/DARK_GRAY)))
+
+(doto
+    B-comparacao
+  (add-points time-data B-data
+              :series-label "B(t) sem material")
+  set-theme-bw
+  (add-subtitle "Histerese")
+  view)
+
