@@ -53,18 +53,21 @@ No caso de Histerese, também observamos a relação de  isomorfismo sendo prese
 
 
 ** Comparação ao caso sem e com material
+#+caption: Superposição de B(t).
+#+ATTR_ORG: :width 400
+[[file:img-plots/B-justaposicao.png][file:img-plots/B-justaposicao.png]]
 
-
+Para qualquer valor de B(t), em qualque t no intervalo, a relação $B_{\textrm{material}}(t)>B_{\textrm{sem-material}}(t)$ é verdadeira.
 
 * Discussão
 
 ** Diferenças entre os casos sem e com meio material
 Em ambos cenários  com e sem materiais existe uma relação isomórfica entre o campo aplicado $V$ e $B$. No entanto, particularmente, no caso em que essa relação é observada em um meio não-material como o Ar, a relação é linearmente depente, com o fator de proporção sendo uma constante. e.i., os gráficos são matematicamente /semelhantes/.
 
-Quando adicionamos um corpo material metálico, Fe-Si - o qual reage à diferença de potencial V, e campos elétromagnético, de forma não linear - a relação de isomorfismo é preservada. Assim, demonstrando que o material apenas reage ao campo V, aumentando ou diminuindo a relação de proporção, em diferentes níveis de excitações de campo e consequentes diferentes estados físicos de excitação.
+Quando adicionamos um corpo material metálico, Fe-Si - o qual reage à diferença de potencial V, e campos elétromagnético, de forma não linear - a relação de isomorfismo é preservada. Assim, demonstrando que o material apenas reage ao campo V, aumentando ou diminuindo a relação de proporção, em diferentes níveis de excitações de campo e consequentes diferentes estados físicos de excitação. E, não existe nenhum outro fator externo o afetando, e.g., gravidade, temperatura, etc. Em particular, essa inexistência de variação decorrente de outros fatore é visível em [[*Análise Gráfica][Análise Gráfica - histerese]].
 
-Em voltagens entre $[0, \pm 1.2]V$ o material de Fe-Si possui baixa saturação, e assim, acresce ao valor do campo, em comparação ao caso sem núcleo. Em voltagens maiores, em módulo, do que $1.2V$ é atingida saturação de excitação do material, e consequentementes, há um fatos de decrescimento da taxa de aumento do campo $B$, por aumento da tensão $V$. Consequentemente, há menores valores de campo resultante B, em comparação aos valores de campo no caso sem material.
+Em voltagens entre $[0, \pm 1.2]V$ o material de Fe-Si possui baixa saturação, e assim, acresce ao valor do campo, em comparação ao caso sem núcleo. Em voltagens maiores, em módulo, do que $1.2V$ é atingida saturação de excitação do material, e consequentementes, há um fatos de decrescimento da taxa de aumento do campo $B$, por aumento da tensão $V$.
 
 ** Caso com material e a Histerese
 
-Os sub-experimentos 2 e 3 são na verdade, experimentos em que o 2 é caso particular de 3. Em que, a variação da diferença de potencial $V$
+Os sub-experimentos 2 e 3 são, na verdade, experimentos em que o 2 é caso particular de 3. No gráfico da Histerese, os valores percorridos nos intervalos $(t \, \epsilon \, [0, 60] \textrm{segundos}) \, \land (t \, \epsilon \, [160, 220] \textrm{segundos})$ são exatamente os mesmos no sub-experimento 2, no intevalos correspondentes de $t \, \epsilon \, [52.5, 105] \textrm{segundos} \land t \, \epsilon \, [0, 52.5] \textrm{segundos}$.
