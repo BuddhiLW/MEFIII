@@ -44,6 +44,8 @@
    ;; (view $data))
 
 ;;save-dir => "~/PP/Faculdade/MEFIII/exp3/img-plots/img-plots.png"
+
+;; --- Sem Núcleo ---
 (view (scatter-plot time-data B-data
                     :title "Experimento sem núcleo"
                     :x-label "Tempo (s)"
@@ -56,6 +58,15 @@
                     :y-label "Voltagem (V)"
                     :legend "Vs(t)"))
 
+(def V-sem (scatter-plot time-data Vs-data
+                    :title "Experimento sem núcleo"
+                    :x-label "Tempo (s)"
+                    :y-label "Voltagem (V)"
+                    :legend "Vs(t)"))es
+
+
+
+;; --- Com núcelo ---
 (view (scatter-plot time-data-com B-data-com
                     :title "Experimento com núcleo"
                     :x-label "Tempo (s)"
