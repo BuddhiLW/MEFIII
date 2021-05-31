@@ -13,5 +13,13 @@ $M = \chi H$
 
 
 * Resultados
+** Experimento 1  - Bobina primária, sem núcleo
+Carretel com 13.3mm de espessura  e comprimento de 19mm.
+
+O experimento: conectar a bobina à uma fonte de corrente estabilizada.
+$I(V) \implies H$
+
+** Experimento 2 - Com núcleo, liga Fe-Si
+Fluxímetro: $A = l.e$; $N_{\textrm{bobinas}} = 1$.
 
 * Discussão
