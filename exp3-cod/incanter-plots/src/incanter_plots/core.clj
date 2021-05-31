@@ -13,7 +13,8 @@
 ;; (s)	(T)	(s)	(V)
 ;; voltagem solenoide (bobina primária)
 
-;; --- Bringing data to plot ---
+;; --- Bringing data to the program ---
+
 (def sem-nucleo
   (read-dataset "../../dados/FeAlB_Bin_sem núcleo.dat"
                 :header false
@@ -41,11 +42,14 @@
 
 
 ;; (with-data histerese
-   ;; (view $data))
+;; (view $data))
 
 ;;save-dir => "~/PP/Faculdade/MEFIII/exp3/img-plots/img-plots.png"
 
+;; --- PLOTS ---
+
 ;; --- Sem Núcleo ---
+
 (view (scatter-plot time-data B-data
                     :title "Experimento sem núcleo"
                     :x-label "Tempo (s)"
@@ -58,15 +62,23 @@
                     :y-label "Voltagem (V)"
                     :legend "Vs(t)"))
 
+
+;; --- Justaposição dos gráficos de V(t), B(t) vs t. ---
+
 (def V-sem (scatter-plot time-data Vs-data
-                    :title "Experimento sem núcleo"
+                    :title "Justaposição V(t) e B(t)"
                     :x-label "Tempo (s)"
-                    :y-label "Voltagem (V)"
-                    :legend "Vs(t)"))es
+                    :y-label "V(t), B(t)"
+                    :series-label "V(t)"
+                    :legend true))
+
+(doto (add-points V-sem time-data B-data
+                  :series-label "B(t)")
+  (set-stroke :width 3 :dash 5))
 
 
 
-;; --- Com núcelo ---
+;; --- Com núcleo ---
 (view (scatter-plot time-data-com B-data-com
                     :title "Experimento com núcleo"
                     :x-label "Tempo (s)"
@@ -76,8 +88,25 @@
 (view (scatter-plot time-data-com Vs-data-com
                     :title "Experimento com núcleo"
                     :x-label "Tempo (s)"
-                    :y-label "Voltagem (B)"
+                    :y-label "Voltagem (V)"
                     :legend "Vs(t)"))
+
+;; --- Justaposição com núcleo---
+(def V-com (scatter-plot time-data-com Vs-data-com
+                    :title "Justaposição V(t), B(t)"
+                    :x-label "Tempo (s)"
+                    :y-label "Voltagem (V)"
+                    :series-label "V(t)"
+                    :legend true))
+
+(doto (add-points V-com time-data-com B-data-com
+                  :series-label "B(t)")
+  (set-stroke :width 3 :dash 5)
+  (add-subtitle "Com núcleo Fe-Si")
+  view)
+
+
+;; --- Histerese ---
 
 (view (scatter-plot time-data-histerese B-data-histerese
                     :title "Experimento sem núcleo"
@@ -90,3 +119,17 @@
                     :x-label "Tempo (s)"
                     :y-label "Voltagem (V)"
                     :legend "Vs(t)"))
+
+;; --- Justaposição Histerese---
+(def V-histerese (scatter-plot time-data-histerese Vs-data-histerese
+                    :title "Justaposição V(t), B(t)"
+                    :x-label "Tempo (s)"
+                    :y-label "Voltagem (V)"
+                    :series-label "V(t)"
+                    :legend true))
+
+(doto (add-points V-histerese time-data-histerese B-data-histerese
+                  :series-label "B(t)")
+  (set-stroke :width 3 :dash 5)
+  (add-subtitle "Histerese")
+  view)
