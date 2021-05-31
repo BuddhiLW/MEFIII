@@ -3,15 +3,9 @@
             [incanter.charts]
             [incanter.stats]
             [sicmutils.env :as env]))
-(env/bootstrap-repl!)
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
 
 (use '(incanter core io charts stats datasets))
-
+(env/bootstrap-repl!)
 ;; (map (derivative #(* % %)) [2 4 6])
 
 ;; --- Data labels ----
@@ -46,8 +40,8 @@
 (def Vs-data-histerese ($ :col3 histerese))
 
 
-;; (with-data sem-nucleo
-;;    (view $data))
+;; (with-data histerese
+   ;; (view $data))
 
 ;;save-dir => "~/PP/Faculdade/MEFIII/exp3/img-plots/img-plots.png"
 (view (scatter-plot time-data B-data
@@ -73,7 +67,6 @@
                     :x-label "Tempo (s)"
                     :y-label "Voltagem (B)"
                     :legend "Vs(t)"))
-
 
 (view (scatter-plot time-data-histerese B-data-histerese
                     :title "Experimento sem núcleo"
