@@ -1,0 +1,96 @@
+* Introdução
+** Resistência
+   A resistência pode ser vista tanto macroscopicamente, quando
+   microscopicamente. O modelo microscópico da resistividade nos
+   explana o porquê dos materiais intrinsicamente conduzirem como
+   metais, ou semi-materiais. A explicação se dá por meio dos Gaps de
+   condução eletrônica do material.
+
+   Dado que a resistividade pode ser
+   pensada como medida relacionada com o livre caminho médio de um
+   elétron, portadores de energia, quando menos empedidos, melhor sua
+   condução, e sua classificaçao se dá como metal. Naturalmente, as
+   estruturas microscópicas desses materiais não são células
+   periódias, as quais rigidamente contém os eletrons. Mas, como um
+   sistema de compartilhamento de eletrons livres - uma núvem
+   eletrônica \cite{schrodinger1935present}.
+
+** /Gaps/ de energia
+   A chance de se encontrar um eletron, microscopicamente, é dado pela
+   distribuição de Fermi-Dirac,
+
+   \begin{equation}
+f(E) = \dfrac{1}{e^{\left(\frac{E-E_F}{kT} \right)}+1}
+   \end{equation}
+
+   Para os semi-condutores, $E_f$ não está dentro da região de valores da
+   banda de condução. Assim, necessariamente, existe um $\Delta E$, o
+   chamado /Gap/ de energia. Em geral, nos semi-condutores possuem
+   $\textrm{GAP} > 2 \textrm{e.V.}$.
+
+   Para os condutores, esse GAP é próximo de zero. Mas, de forma
+   geral, $\textrm{GAP} < 2 \textrm{e.V.}$.
+
+** Linearização e Condutividade de semicondutores
+  A condutividade, provida por cargas e vacâncias, é dado por:
+  $\sigma = n_i |e| (\mu_n + \mu_p)$.
+
+  Quando equacionamos esse valor, em termos do Gap de energia, temos:
+  $\sigma = \sigma_0 e^{\frac{E_{\textrm{GAP}}}{2kT}}$.
+
+  Linearizando a equação, podemos obter:
+  $E_{\textrm{gap}} = 2k.\ln{(\frac{\sigma}{\sigma0})}.T$
+   
+   
+* Materiais e Métodos
+** Materiais
+*** Meçores de variações de medidas sistema
+   Os aparatos experimentais de medição foram um termo resistor e dois
+   multímetros, MDM-8156B-1300-BR, Minipa; Keithley modelo 2000, o qual mede a
+   resistência do termoresistor de platina PT1000.
+
+*** Fontes de energia do sistema
+   Para gerar a diferença de potencial entre os terminais da placa,
+   empregou-se uma fonte Lakeshore série 100, modelo 120; fonte do termoresistor,
+   e uma fonte Politerm POL 16E, para gerar corrente.
+   
+*** Aparatos utilitários
+    Ademais, foram utilizado um paquímetro, Mitutoyo Universal, para obter medidas
+    de distância entre terminais e uma lixa para purificar a superfice
+    dos materiais. Por fim, utilizou-se do Nitrogênio para resfriar o
+    sistema e obter medidas variantes de temperatura.
+    
+** Métodos
+   Utilizou-se no experimento o método das quatro pontas. Ademais,
+   foram coletados dados de Cu, Fe, Nb e Si. Assim, obtivemos medidas
+   de Resistividade ($\Omega$) em função da Temperatura ($K$).
+
+*** Materias avaliados
+    1. Coeficiente de resistividade ($\alpha_T$)
+       + Cu, Fe, Nb, Si
+    2. Resistividade ($\rho$)
+       + Cu, Fe, Nb, Si
+    3. Gap de energia
+       + Si
+
+*** Os materiais das placas
+   As duas placas metálicas constituia-se de:
+   + Fe
+   + Si
+*** Os materiais do fio de condução.
+   Os fios eram compostos por:
+   + Nb
+   + Cu
+
+   Os contatos foram soldados com finas camadas de prata.
+
+*** Métodos numérios
+    A determinação de erros foram medidos no processo de linearização,
+    para $a$ e $b$. Desta forma, calculculou-se o $Gap$ de energia foi
+    calculado do Si.
+
+    Ademais, categorizou-se as curvas de $\sigma$ e $\rho$, por meio
+    da variação da temperatura. Por conseguinte, determinou-se os
+    comportamentos como condutores ou semi-condutores.
+
+    

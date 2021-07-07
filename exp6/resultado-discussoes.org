@@ -1,0 +1,69 @@
+* Condutividade Térmica
+
+# #+begin_export latex
+\begin{equation}
+  \label{eq:dilatacao}
+  \begin{aligned}
+\frac{l_{f} - l_0}{l_0} &=\, \alpha_l(T_f-T_0) \\
+\Leftrightarrow \frac{\Delta l}{l_0}  &=\, \alpha_l\Delta T
+\end{aligned}
+\end{equation}
+ # #+end_export
+
+** Nódulos de Chebyshev e Aproximações polinomiais.
+
+Os pontos de  raízes do polinômio de Chebyshev pode ser utilizado, para minimizar o efeito numérico conhecido como \textit{Runge's phenomenon}. Tanto o \textit{fenômeno de Gibbs} quanto o the \textit{Runge} ocorrem em aproximações polinomiais de diversos pontos, igualmente espaçados \cite{demapped, gu2013zero}. Assim, como este resultado de minimização de erros - criando-se um polinômio de Lagrange, por meio das raízes de Chebyshev - é conhecido, utilizaremos uma implementação na linguagem \textit{Julia} \cite{higham2004numerical}. Esse método possui o nome de Interpolação de Lagrange Baricêntrica. E, métodos para seus cálculos são baseados em derivações matematicamente rigorosas \cite{berrut2004barycentric}.
+
+No artigo de Berrut e  Trefethen \cite{berrut2004barycentric}, dizem os autores,
+#+begin_quote
+Barycentric interpolation is a variant of Lagrange polynomial interpolation that is fast and stable. It deserves to be known as the standard method of polynomial interpolation.
+#+end_quote
+
+** Implementação
+Outras implementações, em Python, podem também ser encontradas \cite{de2020polynomial}.
+
+#+begin_src julia
+   using Pkg
+   Pkg.add("Interpolations")
+   Pkg.add("BarycentricInterpolation")
+   Pkg.add("Polynomials")
+   using BarycentricInterpolation
+  using Interpolations
+  using Polynomials
+  
+     p = Chebyshev2{20}()           # create a Chebyshev type 2 polynomial of order 20
+     x = nodes(p)                   # get the nodes
+     y = sinpi.(x)                  # generate y values at the nodes
+     x_new = rand()*2 -1            # a random number in [-1, +1]
+     println(interpolate(p, y, x_new) ≈ sinpi(x_new))       # hopefully true!
+     D = differentiation_matrix(p)  # get the differentiation matrix
+     println(interpolate(p, D*y, x_new) ≈ pi*cospi(x_new))  # hopefully true!
+#+end_src
+
+O erro da aproximação é de
+
+\begin{equation}
+  |f(x) - P_{n-1}(x)| \leq \frac{1}{2^{n-1}-n!} \left( \frac{b-a}{2} \right)^{n} max_{\xi \epsilon [a,b]} \left( |f^{n}(\epsilon)| \right)
+\end{equation}
+
+Fórmula derivada por Trefethen \cite{trefethen2019approximation}.
+
+Para funções limitadas, considera-se esse erro, de forma prática, zero \cite{gu2013zero}. Como nossos pontos experimentais não possuem divergência numérica, e utilizaremos o supracitado método, considera-se a aproximação sem erro.
+
+#+begin_src julia
+  f[3:,1]
+  f[3:,2]
+#+end_src
+
+Utilizaremos os 100 primeiros  nódulos de Chebyshev. Porém, com o caviat de que teremos que transformar os dados de um domínio de $[-1,1]$ - padrão -, para o de $[0,t_{max}]$. Assim, utilizaremos a transformação
+
+$t_k = \frac{1}{2}(a+b) + \frac{1}{2}(b-a) \cos\left(\frac{2k-1}{2n} \pi\right), \quad k=1,\ldots{},n$
+
+Em que,
+
+$t^{\textrm{inicial}}_k = \cos\left(\frac{2k-1}{2n} \pi\right), \quad k=1,\ldots{},n$
+
+São os valores dos nódulos de Chebyshev do tipo 1. Ademais, em nosso caso, $a = 0 \, \land \, b = t_{max}$.
+
+Assim, teremos que calcular um total de doze diferentes conjuntos de nódulos, o produto cartesiano de possíveis materiais, Teflon, Argamassa, Fibra de vidro e Resina, por  valores de âmper. Consequentemente, teremos doze fits diferentes, interados por esse mesmo processo.
+

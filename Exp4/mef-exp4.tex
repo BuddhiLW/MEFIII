@@ -1,0 +1,154 @@
+% Created 2021-06-16 Wed 16:27
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{bibtex}
+
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.4.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Introdução}
+\label{sec:orga917fff}
+\subsection{Resistência}
+\label{sec:org2295ef2}
+A resistência pode ser vista tanto macroscopicamente, quando
+microscopicamente. O modelo microscópico da resistividade nos
+explana o porquê dos materiais intrinsicamente conduzirem como
+metais, ou semi-materiais. A explicação se dá por meio dos Gaps de
+condução eletrônica do material.
+
+Dado que a resistividade pode ser
+pensada como medida relacionada com o livre caminho médio de um
+elétron, portadores de energia, quando menos empedidos, melhor sua
+condução, e sua classificaçao se dá como metal. Naturalmente, as
+estruturas microscópicas desses materiais não são células
+periódias, as quais rigidamente contém os eletrons. Mas, como um
+sistema de compartilhamento de eletrons livres - uma núvem
+eletrônica \cite{schrodinger1935present}.
+
+\subsection{\emph{Gaps} de energia}
+\label{sec:orga315307}
+A chance de se encontrar um eletron, microscopicamente, é dado pela
+distribuição de Fermi-Dirac,
+
+   \begin{equation}
+f(E) = \dfrac{1}{e^{\left(\frac{E-E_F}{kT} \right)}+1}
+   \end{equation}
+
+Para os semi-condutores, \(E_f\) não está dentro da região de valores da
+banda de condução. Assim, necessariamente, existe um \(\Delta E\), o
+chamado \emph{Gap} de energia. Em geral, nos semi-condutores possuem
+\(\textrm{GAP} > 2 \textrm{e.V.}\).
+
+Para os condutores, esse GAP é próximo de zero. Mas, de forma
+geral, \(\textrm{GAP} < 2 \textrm{e.V.}\).
+
+\subsection{Linearização e Condutividade de semicondutores}
+\label{sec:org2cf9c92}
+A condutividade, provida por cargas e vacâncias, é dado por:
+\(\sigma = n_i |e| (\mu_n + \mu_p)\).
+
+Quando equacionamos esse valor, em termos do Gap de energia, temos:
+\(\sigma = \sigma_0 e^{\frac{E_{\textrm{GAP}}}{2kT}}\).
+
+Linearizando a equação, podemos obter:
+\(E_{\textrm{gap}} = 2k.\ln{(\frac{\sigma}{\sigma0})}.T\)
+
+
+\section{Materiais e Métodos}
+\label{sec:org286d17a}
+\subsection{Materiais}
+\label{sec:orgec19cb2}
+\subsubsection{Meçores de variações de medidas sistema}
+\label{sec:orgb04b2e3}
+Os aparatos experimentais de medição foram um termo resistor e dois
+multímetros, MDM-8156B-1300-BR, Minipa; Keithley modelo 2000, o qual mede a
+resistência do termoresistor de platina PT1000.
+
+\subsubsection{Fontes de energia do sistema}
+\label{sec:orgc20ba61}
+Para gerar a diferença de potencial entre os terminais da placa,
+empregou-se uma fonte Lakeshore série 100, modelo 120; fonte do termoresistor,
+e uma fonte Politerm POL 16E, para gerar corrente.
+
+\subsubsection{Aparatos utilitários}
+\label{sec:org0b066b6}
+Ademais, foram utilizado um paquímetro, Mitutoyo Universal, para obter medidas
+de distância entre terminais e uma lixa para purificar a superfice
+dos materiais. Por fim, utilizou-se do Nitrogênio para resfriar o
+sistema e obter medidas variantes de temperatura.
+
+\subsection{Métodos}
+\label{sec:orgf6fd7f7}
+Utilizou-se no experimento o método das quatro pontas. Ademais,
+foram coletados dados de Cu, Fe, Nb e Si. Assim, obtivemos medidas
+de Resistividade (\(\Omega\)) em função da Temperatura (\(K\)).
+
+\subsubsection{Materias avaliados}
+\label{sec:org3be70eb}
+\begin{enumerate}
+\item Coeficiente de resistividade (\(\alpha_T\))
+\begin{itemize}
+\item Cu, Fe, Nb, Si
+\end{itemize}
+\item Resistividade (\(\rho\))
+\begin{itemize}
+\item Cu, Fe, Nb, Si
+\end{itemize}
+\item Gap de energia
+\begin{itemize}
+\item Si
+\end{itemize}
+\end{enumerate}
+
+\subsubsection{Os materiais das placas}
+\label{sec:orgb54939c}
+As duas placas metálicas constituia-se de:
+\begin{itemize}
+\item Fe
+\item Si
+\end{itemize}
+\subsubsection{Os materiais do fio de condução.}
+\label{sec:orgf1d6452}
+Os fios eram compostos por:
+\begin{itemize}
+\item Nb
+\item Cu
+\end{itemize}
+
+Os contatos foram soldados com finas camadas de prata.
+
+\subsubsection{Métodos numérios}
+\label{sec:org9708afa}
+A determinação de erros foram medidos no processo de linearização,
+para \(a\) e \(b\). Desta forma, calculculou-se o \(Gap\) de energia foi
+calculado do Si.
+
+Ademais, categorizou-se as curvas de \(\sigma\) e \(\rho\), por meio
+da variação da temperatura. Por conseguinte, determinou-se os
+comportamentos como condutores ou semi-condutores.
+
+\bibliography{bib}
+\end{document}
