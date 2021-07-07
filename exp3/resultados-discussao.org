@@ -50,6 +50,7 @@ Porém, a relação não é mais linearmente proporcional.  Não existe uma cons
 #+ATTR_ORG: :width 400
 [[file:img-plots/V-B-justaposicao-histerese.png][file:img-plots/V-B-justaposicao-histerese.png]]
 
+<<<<<<< Updated upstream
 No caso de Histerese, também observamos a relação de  isomorfismo sendo preservado. Em especial, entre os valores não oscilantes de V, em $(t \, \epsilon \, [50, 60.5] \textrm{segundos}) \, \land (t \, \epsilon \, [150.5, 160] \textrm{segundos})$, observamos perfeitamente uma não-oscilação de B(t).
 
 
@@ -60,6 +61,8 @@ No caso de Histerese, também observamos a relação de  isomorfismo sendo prese
 
 Para qualquer valor de B(t), em qualque t no intervalo, a relação $B_{\textrm{material}}(t)>B_{\textrm{sem-material}}(t)$ é verdadeira.
 =======
+=======
+>>>>>>> Stashed changes
 ** Experimento 2 - Com núcleo, liga Fe-Si
 Fluxímetro: $A = l.e$; $N_{\textrm{bobinas}} = 1$.
 >>>>>>> Stashed changes
