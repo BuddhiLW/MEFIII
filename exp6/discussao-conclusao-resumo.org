@@ -1,0 +1,21 @@
+* Discussão
+
+Pelas Tabelas 3 (valor de $k$ das amostras), e a tabela experimental dado no roteiro do relatório \footnote{Encontrada em https://edisciplinas.usp.br/pluginfile.php/6266829/mod_resource/content/0/roteiro.pdf},
+
+|-------------------+------------------------+----------------|
+| Amostras          | $R_{esp}$ ($\Omega$/m) | k_{REF} (W/mK) |
+|-------------------+------------------------+----------------|
+| Fibra de vidro    | 2,356(8)               | 0,04 a 0,05[4] |
+| Teflon            | 17,75(3)               | 0,250[4]       |
+| Argamassa         | 38,01(5)               | 0,6 a 1,6[5]   |
+| Stycast + 10% AlN | 15,98(4)               | 0,320(4)[2]    |
+|-------------------+------------------------+----------------|
+Reproduçao  da tabela do roteiro experimental
+
+Os valores de Fibra de vidro e Stycast + 10% AlN (Resina) se encontram fora do intervalo de confiança derivado dos dados experimentais. O Teflon e a Argamassa estão de acordo com a literatura.
+
+** Fontes de erro
+
+É possível se observar pela, Figura 5 Temperatura vs Int(t) - Fibra de Vidro, que os valores medidos destoam em sua temperatura de medição de quase dez graus celcius. Assim, o valor encontrado de 0,071(3), por mais que próximo do intervalo de 0,04 e 0,05, foi feita a temperaturas entre 33 e 49 celcius. O que nos leva a entender que a medida está enviesada superiormente, como foi observado.
+
+
